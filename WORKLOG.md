@@ -1,0 +1,24 @@
+# WORKLOG
+
+- Built FAQ chatbot workflow (Chat Trigger -> AI Agent -> DeepSeek + Simple Memory) from SDK code -> `validate_workflow` -> `valid: true, nodeCount: 4`
+- Created workflow in personal project -> `create_workflow_from_code` -> `{"workflowId":"kHz8t5r7FWe6sedr","name":"FirstCut AI FAQ Chatbot","nodeCount":4,"autoAssignedCredentials":[]}`
+- First publish attempt (no credential) -> `publish_workflow` -> failed: `Missing required credential: deepSeekApi`
+- User added DeepSeek credential -> `list_credentials` -> `{"id":"bwUNPPSTABQEQtUn","name":"DeepSeek account","type":"deepSeekApi"}`
+- Attached credential to DeepSeek node -> `update_workflow setNodeCredential` -> `appliedOperations: 1`
+- Published -> `publish_workflow` -> `{"success":true,"activeVersionId":"c14c7587-f20a-4741-a6be-19e4d0b86ad6"}`
+- Verified live page -> `webfetch https://rajivranjan.app.n8n.cloud/webhook/895faef8-4f5c-4184-9db0-3844f6b66e7c/chat` -> returned `Chat` (page served, 2xx)
+- Verified workflow active -> `get_workflow_details` -> `"active":true,"triggerCount":1`
+- End-to-end chat test -> `execute_workflow` (manual, chatInput "How much does a FirstCut Sprint cost and how long does it take?") -> execution 2 `status: success`, agent output quoted FAQ prices/timelines correctly, `llm.tokens.in: 2223, llm.tokens.out: 105`, `ai.agent.memory.loads: 1`
+- Wrote PRD for AI use case backlog board -> `write PRD.md` -> 8 sections, contradictions C1-C7 at top, assumptions A1-A26 at end; source note records that no interview transcript was supplied
+- Wrote tech stack for the same board at 100 users -> `write TECH-STACK.md` -> per-layer choice+constraint+rejected, MVP vs production table classified config/additive/migration/rewrite, free-tier cliffs, ending with "decision most expensive to reverse" (open identity-less board)
+- Amended TECH-STACK.md 1.9 -> `edit` -> recorded that the implementation plan's phone-viewability rule overrides the earlier phone-layout deferral (conflict between the two docs)
+- Wrote implementation plan -> `write IMPLEMENTATION-PLAN.md` -> 8 numbered steps each ending phone-viewable, per-step tests, exit criteria, D1-D7 decision checkpoints at Day 0, ordered cut list, phase 2/3
+- Scaffolded web app -> `create-next-app board` -> "Success! Created board at .../board"; `npm install @supabase/supabase-js` -> "added 8 packages"
+- Wrote app code (env/config, supabase client, data layer, board screen, form) -> `write` x9 -> files created; routes: one screen at `/`
+- Type-check + lint -> `npx tsc --noEmit` -> `TSC_OK`; `npm run lint` -> `LINT_OK` (after fixing a react-hooks/set-state-in-effect error)
+- Ran locally -> `npm run dev -- -p 3001` (port 3000 held by unrelated ruby pid 7471) -> "Ready in 217ms"; `curl localhost:3001` -> `200`, title present
+- Probed Supabase with the provided browser key -> `curl .../rest/v1/use_cases` -> `{"code":"PGRST205","message":"Could not find the table 'public.use_cases' in the schema cache"}` HTTP 404 - key valid, table not yet created
+- Wrote SQL setup (table + RLS + 4 policies, then 14 demo rows) -> `write board/SUPABASE-SETUP.sql` -> awaiting user to run it in Supabase
+- Rerun after user ran the SQL -> `curl .../rest/v1/use_cases` -> HTTP `200`, `content-range: 0-13/14` (14 rows)
+- Derived counts + stuck from live data -> `node` script -> `Idea=4 Scored=4 Building=3 Live=3`, stuck `3`
+- Write-path test with restore -> insert `201` (14->15), update `200`, bad stage `400 code 23514`, delete `204` (back to 14)

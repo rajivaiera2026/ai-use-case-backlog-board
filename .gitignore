@@ -1,0 +1,30 @@
+# dependencies
+node_modules/
+**/node_modules/
+
+# Next.js build output
+.next/
+**/.next/
+out/
+**/out/
+
+# environment files - keeps keys on this laptop
+.env
+.env.*
+**/.env
+**/.env.*
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+yarn-error.log*
+
+# vercel
+.vercel
+**/.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+**/next-env.d.ts

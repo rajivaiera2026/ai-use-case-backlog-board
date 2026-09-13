@@ -1,0 +1,167 @@
+FIRSTCUT AI - FREQUENTLY ASKED QUESTIONS
+========================================
+NOTE: This is demo content. FirstCut AI is a fictional studio; all names,
+prices, contact details and examples below are illustrative and should be
+replaced with real business data before publishing.
+
+We help seed to Series A product teams in Bengaluru find, choose and ship
+their first AI feature - the one that moves a metric, not the one that looks
+good in a deck.
+
+------------------------------------------------------------------------
+1. WHAT DOES FIRSTCUT AI ACTUALLY DO?
+We run short, fixed-scope engagements that take you from "we should do
+something with AI" to one AI feature live in your product, measured and
+owned by your team. Discovery, prototype, production build, evaluation and
+handover - one engagement, one team.
+
+2. WHO DO YOU WORK WITH?
+Seed to Series A product teams (roughly 5-60 people) based in Bengaluru and
+across India. You have a real product, real users, and a product owner who
+can make decisions in days, not months. We are a fit if you can start
+within 2-3 weeks.
+
+3. WE DON'T KNOW WHICH AI FEATURE TO BUILD FIRST. CAN YOU HELP?
+That is the core of the engagement. Week 1 is a feature-selection sprint:
+we score candidate ideas against user pain, data readiness, model
+feasibility, cost per call and time-to-ship, then recommend one to build.
+You get the written reasoning even if you stop there.
+
+4. HOW LONG DOES IT TAKE?
+4 weeks for a FirstCut Sprint (1 week discovery + 3 weeks build). A typical
+engagement ends up 5-7 weeks including evaluation and handover. Your
+kickoff happens within 10 working days of signing.
+
+5. HOW MUCH DOES IT COST?
+FirstCut Sprint (4 weeks): Rs 4,50,000 - Rs 7,50,000, fixed before kickoff.
+Price depends on scope, number of integrations, and evaluation complexity.
+Discovery-only (1 week): Rs 1,25,000, fully credited against a Sprint
+started within 60 days.
+Ongoing retainers: Rs 3,50,000 - Rs 6,00,000 per month.
+Model and API usage (e.g. LLM, vector DB, hosting) is billed to your own
+account and typically runs Rs 15,000 - Rs 1,20,000 per month at our clients'
+volumes.
+
+6. WHAT IS INCLUDED IN THE SPRINT PRICE?
+Feature-selection report, a working prototype, production-quality code
+merged into your repo, an evaluation suite with a pass/fail gate, a
+one-page cost/latency model, and 2 weeks of post-launch support. Not
+included: third-party API usage, cloud costs, and any redesign of
+surrounding product surfaces.
+
+7. DO WE NEED AN AI OR ML TEAM TO WORK WITH YOU?
+No. You need one technical owner (an engineer who can review PRs) and one
+product decision-maker. We deliberately build so your existing engineers
+can maintain the feature after handover, and we spend the last week
+pairing with them.
+
+8. WHO OWNS THE CODE AND THE IP?
+You do. All code, prompts, evaluation sets and documentation created in the
+engagement are assigned to you on final payment. We retain no licence and
+do not reuse your data or domain logic in other engagements.
+
+9. CAN WE USE OUR OWN STACK AND CLOUD?
+Yes. We build on your stack by default - TypeScript/Python, your existing
+API, your AWS/GCP/Azure account, your auth and logging. If you have no
+preference, our default is Next.js or FastAPI, Postgres, and a hosted
+model provider, all in your cloud account.
+
+10. WHO HOLDS THE LLM API KEYS?
+You do. Keys live in your own provider account and your own server-side
+environment variables. They are never committed, never placed in browser
+code, and never printed in logs. We ask for a scoped, spend-capped key for
+the build period and hand it back at the end.
+
+11. IS OUR CUSTOMER DATA SAFE?
+We work inside your infrastructure and contracts. We do not copy
+production data to our machines; where realistic samples are needed, we use
+de-identified extracts with your written approval. We can sign your NDA and
+DPA, and we support data-residency requirements for Indian users. You remain
+the data fiduciary under applicable Indian law; we act as your processor.
+
+12. HOW DO YOU MAKE SURE THE AI FEATURE IS ACTUALLY GOOD?
+Every Sprint ends with an evaluation suite that encodes your acceptance
+criteria in code - accuracy, refusal behaviour, latency and cost per
+request. The feature only counts as shipped if it passes that suite. We do
+not tune the test to make a weak feature look green.
+
+13. WHAT IF THE AI FEATURE DOESN'T WORK OUT?
+If the chosen feature fails its acceptance criteria in the build window,
+we tell you plainly, hand over all work and the evaluation evidence, and
+either (a) run a reset sprint at 50% cost to change approach, or (b) refund
+the final milestone. Discovery-only engagements carry no such risk - you
+get the recommendation and the reasoning regardless.
+
+14. HOW DO YOU HANDLE HALLUCINATIONS AND BAD OUTPUTS?
+By containing them: retrieval grounded in your own content, structured
+outputs with schema validation, confidence thresholds with a safe fallback
+to the non-AI path, and human review where the action is irreversible. We
+also log every input/output pair so you can debug real failures.
+
+15. WILL THIS BE EXPENSIVE TO RUN AT SCALE?
+We model it before you commit. The Sprint deliverable includes cost per
+request, cost per active user per month, and the volume at which the
+feature stops being economical. Clients typically launch under
+Rs 40,000/month and stay under Rs 1,20,000/month at 10,000+ monthly
+requests.
+
+16. DO YOU WORK ON-SITE OR REMOTE?
+Our team is in Bengaluru. Expect one on-site day per week (your office or
+ours in Koramangala) and the rest remote, with a 30-minute standup three
+days a week and a written Friday update.
+
+17. CAN YOU WORK ALONGSIDE OUR EXISTING ENGINEERING TEAM?
+Yes - that is the preferred model. We take the uncertain AI work (model
+choice, prompts, retrieval, evaluation) and your team keeps the product
+surface, design and surrounding systems. Shared repository, shared PR
+review, no separate side channel.
+
+18. WHAT HAPPENS AFTER THE SPRINT?
+Two weeks of included support, then one of: your team takes it (with the
+handover docs and pairing week), a light care retainer from Rs 60,000/month
+for monitoring, evaluation upkeep and small improvements, or an ongoing
+product retainer at Rs 3,50,000 - Rs 6,00,000/month for continued AI
+shipping.
+
+19. HOW DO PAYMENTS AND CONTRACTS WORK?
+40% on signing, 40% at prototype acceptance, 20% on final handover. Invoices
+in INR, GST extra, payable within 15 days. Monthly retainers are billed
+in advance on a 1-month rolling term with 30 days' notice. Standard MSA,
+NDA and DPA are available; we can start on your paper.
+
+20. HOW DO WE GET STARTED?
+Email hello@firstcut.example with a short description of your product, your
+stage, and the user problem you suspect AI could solve. We reply within one
+working day and, if it looks like a fit, hold a free 30-minute scoping call
+within the week. A paid Discovery Sprint is usually the fastest way to a
+decision.
+
+------------------------------------------------------------------------
+PRICES AT A GLANCE (INR, GST extra)
+Discovery Sprint (1 week) ............ Rs 1,25,000 (credited to Sprint)
+FirstCut Sprint (4 weeks) ............ Rs 4,50,000 - Rs 7,50,000
+Reset Sprint (if needed) ............. 50% of Sprint price
+Care retainer ........................ from Rs 60,000 / month
+Product retainer ..................... Rs 3,50,000 - Rs 6,00,000 / month
+Model + API usage .................... billed to your account, typically
+                                       Rs 15,000 - Rs 1,20,000 / month
+
+TIMINGS
+Reply to enquiry ..................... within 1 working day
+Scoping call ......................... within 1 week
+Kickoff .............................. within 10 working days of signing
+FirstCut Sprint ...................... 4 weeks
+Prototype review ..................... end of week 2
+Handover + pairing ................... week 4, support through week 6
+Typical time to launch ............... 5-7 weeks
+
+CONTACT
+Email ............ hello@firstcut.example
+Phone ............ +91 80 4000 0000 (Mon-Fri, 10:00-18:00 IST)
+WhatsApp ........ +91 98450 00000
+Address .......... 3rd Floor, 80 Ft Road, Koramangala 4th Block,
+                   Bengaluru 560034, Karnataka, India
+Website .......... www.firstcut.example
+LinkedIn ......... linkedin.com/company/firstcut-example
+
+Last updated: 13 September 2026
